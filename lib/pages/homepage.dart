@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_drawer_signup_ui_flutter/widgets/drawer.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class Homepage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Homepage"),
         ),
-        drawer: const Drawer(backgroundColor: Colors.blue),
+        drawer: MyDrawer(),
       ),
     );
     ;
