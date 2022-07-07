@@ -10,6 +10,7 @@ class Homepage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Homepage"),
+          backgroundColor: Color(0xff02B29A),
         ),
         drawer: MyDrawer(),
       ),
