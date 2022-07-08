@@ -13,23 +13,23 @@ class MyDrawer extends StatelessWidget {
         //padding: const EdgeInsets.all(0.0),
         children: const [
           DrawerHeader(
-              // padding: EdgeInsets.all(0.0),
+              padding: EdgeInsets.all(0.0),
               child: UserAccountsDrawerHeader(
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 7, 126, 110),
-            ),
-            accountName: Text(
-              "Marya Baloch",
-              style: TextStyle(fontSize: 20.0),
-            ),
-            accountEmail: Text(
-              "Maryabaloch7@gmail.com",
-              style: TextStyle(fontSize: 17.0),
-            ),
-            currentAccountPicture: CircleAvatar(
-              backgroundImage: AssetImage(accountImage),
-            ),
-          )),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 7, 126, 110),
+                ),
+                accountName: Text(
+                  "Marya Baloch",
+                  style: TextStyle(fontSize: 20.0),
+                ),
+                accountEmail: Text(
+                  "Maryabaloch7@gmail.com",
+                  style: TextStyle(fontSize: 17.0),
+                ),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: AssetImage(accountImage),
+                ),
+              )),
           Divider(height: 0.1),
           ListTile(
             leading: Icon(
