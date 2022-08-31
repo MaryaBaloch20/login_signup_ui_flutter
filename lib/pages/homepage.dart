@@ -8,25 +8,33 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext buildContext) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(primarySwatch: Colors.purple),
+        theme: ThemeData(primarySwatch: Colors.green),
         home: DefaultTabController(
           length: 3,
           child: Scaffold(
             appBar: AppBar(
-              title: const Text("19S"),
+              title: const Center(child: Text("19SW20")),
               actions: [
-                IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.settings,
+                      size: 30,
+                    ))
               ],
               bottom: const TabBar(
                 tabs: [
                   Tab(
                       child: Icon(
-                    Icons.chat,
+                    Icons.person,
                   )),
-                  Tab(child: Icon(Icons.notification_add)),
                   Tab(
                       child: Icon(
-                    Icons.settings,
+                    Icons.contact_mail,
+                  )),
+                  Tab(
+                      child: Icon(
+                    Icons.info,
                   ))
                 ],
               ),
@@ -34,91 +42,106 @@ class Homepage extends StatelessWidget {
             drawer: MyDrawer(),
             body: TabBarView(children: [
               Column(
-                children: const [
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
                   Card(
-                    child: ListTile(
-                      title: Text("19SW01"),
-                      subtitle: Text("You are now connected to this chat."),
-                      leading: Icon(
-                        Icons.person,
-                        size: 30,
-                      ),
-                      trailing: Icon(
-                        Icons.star,
-                        color: Colors.orange,
-                      ),
-                    ),
-                  ),
+                      color: Colors.green.shade300,
+                      // padding: const EdgeInsets.all(10.0),
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 30.0),
+                      child: const ListTile(
+                        leading: Icon(
+                          Icons.person,
+                          color: Colors.white,
+                          size: 30.0,
+                        ),
+                        title: Text(
+                          "Marya Baloch",
+                          style: TextStyle(
+                            fontFamily: 'Sans Pro',
+                            fontSize: 22.0,
+                          ),
+                        ),
+                      )),
                   Card(
-                    child: ListTile(
-                      title: Text("Navera"),
-                      subtitle: Text("You are now connected to this chat."),
-                      leading: Icon(
-                        Icons.person,
-                        size: 30,
-                      ),
-                      trailing: Icon(
-                        Icons.favorite,
-                        color: Colors.pink,
-                      ),
-                    ),
-                  ),
+                      color: Colors.green.shade300,
+                      // padding: const EdgeInsets.all(10.0),
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 30.0),
+                      child: const ListTile(
+                        leading: Icon(
+                          Icons.numbers,
+                          color: Colors.white,
+                          size: 30.0,
+                        ),
+                        title: Text(
+                          "19SW20",
+                          style: TextStyle(
+                            fontFamily: 'Sans Pro',
+                            fontSize: 22.0,
+                          ),
+                        ),
+                      )),
                   Card(
-                    child: ListTile(
-                      title: Text("Family Group"),
-                      subtitle: Text("You are added to this group by Navera."),
-                      leading: Icon(
-                        Icons.people,
-                        size: 30,
-                      ),
-                      trailing: Icon(
-                        Icons.front_hand,
-                        color: Colors.green,
-                      ),
+                      color: Colors.green.shade300,
+                      // padding: const EdgeInsets.all(10.0),
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 30.0),
+                      child: const ListTile(
+                        leading: Icon(
+                          Icons.place,
+                          color: Colors.white,
+                          size: 30.0,
+                        ),
+                        title: Text(
+                          "Section 2",
+                          style: TextStyle(
+                            fontFamily: 'Sans Pro',
+                            fontSize: 22.0,
+                          ),
+                        ),
+                      )),
+                  const SizedBox(height: 15),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                        minimumSize:
+                            MaterialStateProperty.all(const Size(100, 50)),
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.green)),
+                    child: const Text(
+                      "Click Me",
+                      style: TextStyle(fontSize: 20),
                     ),
-                  ),
-                  Card(
-                    child: ListTile(
-                      title: Text("19SW sec 1"),
-                      subtitle: Text("You are added to this group by CR."),
-                      leading: Icon(
-                        Icons.people,
-                        size: 30,
-                      ),
-                      trailing: Icon(
-                        Icons.phonelink,
-                        color: Colors.blue,
-                      ),
-                    ),
-                  ),
+                  )
                 ],
               ),
-              Center(
-                child: Text("Hello World"),
+              const Center(
+                child: Text("This is Contact Page"),
               ),
-              Center(
-                child: Text("Hello World"),
+              const Center(
+                child: Text("This is Info Page"),
               ),
             ]),
             bottomNavigationBar: BottomNavigationBar(
-              items: [
+              items: const [
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
                   label: "Home",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.phone),
-                  label: "Call",
+                  icon: Icon(Icons.gamepad),
+                  label: "profile",
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.policy),
-                  label: "Policy",
+                  label: "Info",
                 ),
               ],
             ),
             floatingActionButton: FloatingActionButton(
               onPressed: () {},
-              child: Icon(Icons.add_call),
+              child: const Icon(Icons.camera),
             ),
           ),
         ));
