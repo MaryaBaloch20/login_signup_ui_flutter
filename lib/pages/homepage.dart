@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:login_drawer_signup_ui_flutter/main.dart';
 import 'package:login_drawer_signup_ui_flutter/widgets/drawer.dart';
 
-class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+class Homepage extends StatefulWidget {
+  Homepage({super.key, required this.female, required this.male});
+  bool male, female = false;
 
+  @override
+  State<Homepage> createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext buildContext) {
     return MaterialApp(
@@ -116,8 +123,45 @@ class Homepage extends StatelessWidget {
                   )
                 ],
               ),
-              const Center(
-                child: Text("This is Contact Page"),
+              Center(
+                // child: Text("This is Contact Page"),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                      const Text(
+                        "Male",
+                        style: TextStyle(fontSize: 30),
+                      ),
+                      Transform.scale(
+                        scale: 1.5,
+                        child: Checkbox(
+                            value: widget.male,
+                            onChanged: (bool? value) {
+                              setState(() {
+                                widget.male = value!;
+                              });
+                            }),
+                      )
+                    ]),
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                      const Text(
+                        "Female",
+                        style: TextStyle(fontSize: 30),
+                      ),
+                      Transform.scale(
+                        scale: 1.5,
+                        child: Checkbox(
+                            value: widget.female,
+                            onChanged: (bool? value) {
+                              setState(() {
+                                widget.female = value!;
+                              });
+                            }),
+                      )
+                    ]),
+                  ],
+                ),
               ),
               const Center(
                 child: Text("This is Info Page"),

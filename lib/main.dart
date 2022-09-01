@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_drawer_signup_ui_flutter/pages/homepage.dart';
 import 'package:login_drawer_signup_ui_flutter/pages/login.dart';
 
 void main() {
@@ -15,9 +16,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      home: Homepage(
+        female: false,
+        male: false,
+      ),
     );
   }
 }

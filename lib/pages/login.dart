@@ -55,8 +55,13 @@ class _LoginState extends State<Login> {
                 const EdgeInsets.symmetric(vertical: 3.0, horizontal: 150.0),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Homepage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Homepage(
+                              male: false,
+                              female: false,
+                            )));
               },
               child: Container(
                 padding: const EdgeInsets.all(20),
