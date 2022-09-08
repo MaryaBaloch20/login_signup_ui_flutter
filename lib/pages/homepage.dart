@@ -163,9 +163,32 @@ class _HomepageState extends State<Homepage> {
                   ],
                 ),
               ),
-              const Center(
-                child: Text("This is Info Page"),
-              ),
+              GridView(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3),
+                children: const [
+                  FlutterLogo(),
+                  FlutterLogo(),
+                  FlutterLogo(),
+                  FlutterLogo(),
+                  FlutterLogo(),
+                  FlutterLogo(),
+                  FlutterLogo(),
+                  FlutterLogo(),
+                ],
+              )
+              // Center(
+              //   child: GridView(
+              //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              //         crossAxisCount: 2),
+              //     children: <Widget>[
+              //       FlutterLogo(),
+              //       FlutterLogo(),
+              //       FlutterLogo(),
+              //       FlutterLogo(),
+              //     ],
+              //   ),
+              // ),
             ]),
             bottomNavigationBar: BottomNavigationBar(
               items: const [
